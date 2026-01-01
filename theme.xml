@@ -1,0 +1,260 @@
+<!--
+name: Retr0_DEDSEC_v1
+version: 1.00
+author: retr0
+license: GNU General Public License v3.0
+-->
+
+
+<theme>
+  <formatVersion>7</formatVersion>
+
+  <include subset="ASPECT RATIO" name="4:3">./subsets/640x480.xml</include>
+  <include subset="ASPECT RATIO" name="1:1">./subsets/720x720.xml</include>
+  <include subset="ASPECT RATIO" name="16:9">./subsets/1280x720.xml</include>
+  <include subset="SCROLL SOUND" name="OFF"></include>
+  <include subset="SCROLL SOUND" name="ON">./subsets/sound.xml</include>
+
+  <variables>
+    <customFont>PixeloidSans.ttf</customFont>
+    <themeColor>00FFFF</themeColor>      
+    <highlightColor>FF00FF</highlightColor> 
+  </variables>
+
+  <view name="system, basic, detailed, video, grid">
+    <image name="background" extra="true">
+      <path>./_art/bg_main.png</path>
+      <size>1 1</size>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <zIndex>0</zIndex>
+    </image>
+    
+    <image name="header_bg" extra="true">
+       <path>./_art/bg_main.png</path>
+       <size>1 0.08</size>
+       <pos>0 0</pos>
+       <origin>0 0</origin>
+       <color>000000</color>
+       <zIndex>5</zIndex>
+    </image>
+
+    <image name="footer_bg" extra="true">
+       <path>./_art/bg_main.png</path>
+       <size>1 0.08</size> 
+       <pos>0 1</pos>
+       <origin>0 1</origin> 
+       <color>000000</color> 
+       <zIndex>5</zIndex>
+    </image>
+    
+    <helpsystem name="help">
+      <pos>0.5 0.945</pos> 
+      <origin>0.5 0</origin>
+      <textColor>00FFFF</textColor>
+      <iconColor>FF00FF</iconColor>
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.028</fontSize>
+      <zIndex>20</zIndex>
+    </helpsystem>
+  </view>
+
+  <view name="screen">
+    <text name="clock">
+      <color>00FFFF</color> 
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.035</fontSize> 
+      <pos>0.72 0.015</pos> 
+      <size>0.26 0.05</size>
+      <alignment>right</alignment>
+      <verticalAlignment>center</verticalAlignment>
+      <format>%I:%M %p</format>
+      <zIndex>20</zIndex>
+    </text>
+
+    <batteryIndicator name="batteryIndicator">
+      <pos>0.02 0.01</pos> 
+      <size>0.11 0.075</size> 
+      <incharge>./_art/battery/incharge.svg</incharge>
+      <full>./_art/battery/full.svg</full>
+      <at75>./_art/battery/75.svg</at75>
+      <at50>./_art/battery/50.svg</at50>
+      <at25>./_art/battery/25.svg</at25>
+      <empty>./_art/battery/empty.svg</empty>
+      <zIndex>20</zIndex>
+    </batteryIndicator>
+  </view>
+
+  <view name="system">
+    <text name="systemInfo">
+      <visible>false</visible> 
+    </text>
+
+    <carousel name="systemcarousel">
+      <type>horizontal</type> 
+      <pos>0 0.15</pos> 
+      <size>1 0.70</size> 
+      <color>00000000</color> 
+      
+      <logoSize>0.40 0.50</logoSize> 
+      
+      <logoScale>2.1</logoScale> 
+      
+      <maxLogoCount>3</maxLogoCount> 
+      <zIndex>10</zIndex>
+    </carousel>
+    
+    <text name="logoText">
+      <visible>false</visible>
+    </text>
+
+    <image name="logo">
+      <path>./logos/${system.theme}.svg</path>
+      <path>./logos/${system.theme}.png</path>
+      <path>./_art/logo_missing.png</path> 
+      
+      <maxSize>0.3 0.2</maxSize>
+      
+      <zIndex>11</zIndex>
+    </image>
+    
+  </view>
+
+  <view name="basic, detailed, video">
+    <image name="gamelist_blackout" extra="true">
+       <path>./_art/bg_main.png</path>
+       <pos>0 0</pos>
+       <size>1 1</size>
+       <color>000000</color> 
+       <zIndex>2</zIndex> 
+    </image>
+
+    <textlist name="gamelist">
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.03</fontSize> 
+      <pos>0.02 0.10</pos>
+      <size>0.55 0.80</size> 
+      <alignment>left</alignment>
+      <primaryColor>00FFFF</primaryColor>
+      <selectedColor>000000</selectedColor> 
+      <selectorColor>FF00FF</selectorColor> 
+      <secondaryColor>808080</secondaryColor>
+      <zIndex>10</zIndex>
+    </textlist>
+  </view>
+
+  <view name="detailed, video">
+    <image name="md_image">
+      <pos>0.77 0.28</pos> 
+      <origin>0.5 0.5</origin>
+      <maxSize>0.38 0.40</maxSize> 
+      <zIndex>10</zIndex>
+    </image>
+
+    <text name="label_dev, label_genre, label_players">
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.022</fontSize> 
+      <color>00FFFF</color> 
+      <alignment>left</alignment>
+      <zIndex>10</zIndex>
+    </text>
+    
+    <text name="label_dev" extra="true">
+      <text>DEV_</text>
+      <pos>0.58 0.52</pos>
+    </text>
+    <text name="label_genre" extra="true">
+      <text>CAT_</text> 
+      <pos>0.58 0.57</pos>
+    </text>
+    <text name="label_players" extra="true">
+      <text>USR_</text> 
+      <pos>0.58 0.62</pos>
+    </text>
+
+    <text name="md_developer, md_genre, md_players">
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.022</fontSize>
+      <color>FFFFFF</color> 
+      <alignment>left</alignment>
+      <zIndex>10</zIndex>
+    </text>
+
+    <text name="md_developer">
+      <pos>0.66 0.52</pos>
+      <size>0.30 0.03</size>
+    </text>
+    <text name="md_genre">
+      <pos>0.66 0.57</pos>
+      <size>0.30 0.03</size>
+    </text>
+    <text name="md_players">
+      <pos>0.66 0.62</pos>
+      <size>0.30 0.03</size>
+    </text>
+
+    <datetime name="md_releasedate">
+      <color>00FF00</color> 
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.022</fontSize>
+      <pos>0.78 0.67</pos> 
+      <origin>0.5 0</origin>
+      <format>&lt; %Y &gt;</format>
+      <zIndex>10</zIndex>
+    </datetime>
+
+    <text name="md_description">
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.02</fontSize> 
+      <color>808080</color> 
+      <pos>0.58 0.74</pos>
+      <size>0.40 0.16</size> 
+      <alignment>left</alignment>
+      <forceUppercase>1</forceUppercase>
+      <zIndex>10</zIndex>
+    </text>
+  </view>
+  
+  <view name="menu">
+    <menuBackground name="menubg">
+      <color>000000</color> 
+    </menuBackground>
+    
+    <menuText name="menutext">
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.035</fontSize>
+      <color>00FFFF</color> 
+      <separatorColor>202020</separatorColor>
+      <selectorColor>FF00FF</selectorColor> 
+      <selectedColor>000000</selectedColor> 
+    </menuText>
+
+    <menuIcons name="menuicons">
+       <iconKodi>./icons/Kodi.svg</iconKodi>
+       <iconSystem>./icons/System.svg</iconSystem>
+       <iconUpdates>./icons/Update.svg</iconUpdates>
+       <iconControllers>./icons/Controllers.svg</iconControllers>
+       <iconGames>./icons/Games.svg</iconGames>
+       <iconUI>./icons/UI.svg</iconUI>
+       <iconSound>./icons/Sound.svg</iconSound>
+       <iconNetwork>./icons/Network.svg</iconNetwork>
+       <iconScraper>./icons/Scraper.svg</iconScraper>
+       <iconAdvanced>./icons/Advanced.svg</iconAdvanced>
+       <iconQuit>./icons/Quit.svg</iconQuit>
+       <iconRetroachievements>./icons/Retroachievements.svg</iconRetroachievements>
+       <iconRestart>./icons/Restart.svg</iconRestart>
+       <iconShutdown>./icons/Shutdown.svg</iconShutdown>
+       <iconFastShutdown>./icons/FastShutdown.svg</iconFastShutdown>
+       <iconManual>./icons/Manual.svg</iconManual>
+    </menuIcons>
+
+    <menuButton name="menubutton">
+      <fontPath>./_art/PixeloidSans.ttf</fontPath>
+      <fontSize>0.035</fontSize>
+      <color>00FFFF</color> 
+      <selectorColor>00FF00</selectorColor> 
+      <selectedColor>000000</selectedColor> 
+    </menuButton>
+  </view>
+
+</theme>
