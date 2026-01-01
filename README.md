@@ -32,7 +32,7 @@ This theme is a comprehensive modification designed to turn your handheld into a
 The aesthetic is heavily inspired by the "DEDSEC" hacker group from Ubisoft's *Watch Dogs 2*. The color palette (Cyan `00FFFF`, Magenta `FF00FF`, and Black) mimics the raw CMYK printing style often used in the game's street art and propaganda. The "Last Played" icon featuring a clock was custom-generated to fit the lore of "time lost" in cyberspace.
 
 ## Issues
-I primarily test on [Insert Your Device Name Here, e.g., R36S / RG35XX].
+I primarily test on R36S
 If you notice alignment issues on other aspect ratios, please file an issue with a screenshot, and I will do my best to patch it.
 
 ## Credits & Licenses
